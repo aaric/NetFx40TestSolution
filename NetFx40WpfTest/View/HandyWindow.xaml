@@ -1,0 +1,12 @@
+﻿<Window x:Class="NetFx40WpfTest.View.HandyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        Title="HandyControlWindow" Height="600" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button Content="测试按钮" Style="{StaticResource ButtonPrimary}"
+                    hc:IconElement.Geometry="{StaticResource SuccessGeometry}" />
+        </StackPanel>
+    </Grid>
+</Window>
