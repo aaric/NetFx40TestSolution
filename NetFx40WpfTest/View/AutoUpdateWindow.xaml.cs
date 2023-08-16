@@ -22,6 +22,8 @@ namespace NetFx40WpfTest.View
 
         private void Update_JsonConfig_Button_OnClick(object sender, RoutedEventArgs e)
         {
+            AutoUpdater.ShowSkipButton = false;
+            AutoUpdater.ShowRemindLaterButton = false;
             AutoUpdater.ParseUpdateInfoEvent += JsonConfigParseUpdateInfoEvent;
             AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdate.json");
         }
@@ -32,14 +34,15 @@ namespace NetFx40WpfTest.View
             if (null != config)
             {
                 Mode configUpdateMode;
-                if (!Enum.TryParse(config.mandatory.mode.ToString(), out configUpdateMode))
+                if (!Enum.TryParse(config.mandatory.mode.ToString(),
+                        out configUpdateMode))
                 {
                     configUpdateMode = Mode.Normal;
                 }
 
                 args.UpdateInfo = new UpdateInfoEventArgs
                 {
-                    // InstalledVersion = new Version(config.version),
+                    CurrentVersion = config.version,
                     ChangelogURL = config.changelog,
                     DownloadURL = config.url,
                     Mandatory = config.mandatory.value,
