@@ -25,10 +25,10 @@ namespace NetFx40WpfTest.View
 
         private void UpdateXml_Button_OnClick(object sender, RoutedEventArgs e)
         {
-            /*if (MessageBoxResult.OK == MessageBox.Show("当前版本：1.0.0.1，将升级到1.0.0.2，是否升级？", "升级提示",
+            /*if (MessageBoxResult.OK == MessageBox.Show("当前版本：1.0.0.1，将升级到1.0.2.4，是否升级？", "升级提示",
                     MessageBoxButton.OKCancel, MessageBoxImage.Warning))
             {
-                AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdate.xml");
+                AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdate.xml", Assembly.GetEntryAssembly());
             }*/
 
             // AutoUpdater.AppTitle = Assembly.GetEntryAssembly().GetName().Name;
@@ -41,12 +41,11 @@ namespace NetFx40WpfTest.View
 
             // AutoUpdater.Mandatory = true;
             // AutoUpdater.UpdateMode = Mode.Forced;
-
-            // AutoUpdater.RunUpdateAsAdmin = false;
             // AutoUpdater.OpenDownloadPage = true;
             // AutoUpdater.DownloadPath = Environment.CurrentDirectory;
 
-            // AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdate.xml", Assembly.GetEntryAssembly());
+            // AutoUpdater.RunUpdateAsAdmin = false;
+
             AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdate.xml");
         }
     }
