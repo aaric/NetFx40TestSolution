@@ -13,14 +13,14 @@
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-    <version>1.0.0.2</version><!-- 升级版本 -->
+    <version>1.0.2.4</version><!-- 升级版本 -->
     <url>http://127.0.0.1:8080/vs2013/test/AutoUpdaterTest.zip</url><!-- 升级包下载路径 -->
     <changelog>http://127.0.0.1:8080/vs2013/test/AutoUpdateChangeLog.html</changelog><!-- 升级日志 -->
     <mandatory mode="2">false</mandatory><!-- 是否强制升级：false-否，true-是 -->
     <!-- certutil.exe -hashfile AutoUpdaterTest.zip MD5 --><!-- 升级包校验 -->
-    <!--<checksum algorithm="MD5">566e34284c5d49b1b377db8de0ee3ce9</checksum>-->
+    <!--<checksum algorithm="MD5">d08c4cfec6ced093f01291ed19e8b78b</checksum>-->
     <!-- certutil.exe -hashfile AutoUpdaterTest.zip SHA256 --><!-- 升级包校验 -->
-    <checksum algorithm="SHA256">01f7d512f62b5f654e9796ac952f8912cd4f78c589d42089f51373193d9f1f09</checksum>
+    <checksum algorithm="SHA256">4fa82200669c06ed1a129c3231216b98da1a25e94667ea9eb6a0b21f23974adb</checksum>
 </item>
 ```
 
@@ -34,7 +34,7 @@
     <title>Auto Update Change Log</title>
 </head>
 <body>
-    <h1>这是一个重要的更新，从1.0.0.1到1.0.0.2</h1>
+    <h1>这是一个重要的更新，从1.0.0.1到1.0.2.4！</h1>
 </body>
 </html>
 ```
