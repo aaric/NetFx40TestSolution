@@ -8,7 +8,7 @@
 
 ## [AutoUpdater.NET](https://www.nuget.org/packages/AutoUpdater.NET.CredentialsFix)
 
-1. AutoUpdate.xml
+1. AutoUpdate.xml | AutoUpdate.json
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -22,6 +22,22 @@
     <!-- certutil.exe -hashfile AutoUpdaterTest.zip SHA256 --><!-- 升级包校验 -->
     <checksum algorithm="SHA256">4fa82200669c06ed1a129c3231216b98da1a25e94667ea9eb6a0b21f23974adb</checksum>
 </item>
+```
+
+```json
+{
+  "version": "1.0.2.4",
+  "url": "http://127.0.0.1:8080/vs2013/test/AutoUpdaterTest.zip",
+  "changelog": "http://127.0.0.1:8080/vs2013/test/AutoUpdateChangeLog.html",
+  "mandatory": {
+    "mode": 2,
+    "value": false
+  },
+  "checksum": {
+    "hashingAlgorithm": "SHA256",
+    "value": "4fa82200669c06ed1a129c3231216b98da1a25e94667ea9eb6a0b21f23974adb"
+  }
+}
 ```
 
 2. AutoUpdateChangeLog.html

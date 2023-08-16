@@ -1,6 +1,8 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Windows;
 using AutoUpdaterDotNET;
+using Newtonsoft.Json;
 
 namespace NetFx40WpfTest.View
 {
@@ -18,12 +20,37 @@ namespace NetFx40WpfTest.View
             VersionLabel.Content = Assembly.GetEntryAssembly().GetName().Version;
         }
 
-        private void UpdateJson_Button_OnClick(object sender, RoutedEventArgs e)
+        private void Update_JsonConfig_Button_OnClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Current Version: " + VersionLabel.Content);
+            AutoUpdater.ParseUpdateInfoEvent += JsonConfigParseUpdateInfoEvent;
+            AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdate.json");
         }
 
-        private void UpdateXml_Button_OnClick(object sender, RoutedEventArgs e)
+        private void JsonConfigParseUpdateInfoEvent(ParseUpdateInfoEventArgs args)
+        {
+            dynamic config = JsonConvert.DeserializeObject(args.RemoteData);
+            if (null != config)
+            {
+                Mode configUpdateMode;
+                if (!Enum.TryParse(config.mandatory.mode.ToString(), out configUpdateMode))
+                {
+                    configUpdateMode = Mode.Normal;
+                }
+
+                args.UpdateInfo = new UpdateInfoEventArgs
+                {
+                    // InstalledVersion = new Version(config.version),
+                    ChangelogURL = config.changelog,
+                    DownloadURL = config.url,
+                    Mandatory = config.mandatory.value,
+                    UpdateMode = configUpdateMode,
+                    HashingAlgorithm = config.checksum.hashingAlgorithm,
+                    Checksum = config.checksum.value
+                };
+            }
+        }
+
+        private void Update_XmlConfig_Button_OnClick(object sender, RoutedEventArgs e)
         {
             /*if (MessageBoxResult.OK == MessageBox.Show("当前版本：1.0.0.1，将升级到1.0.2.4，是否升级？", "升级提示",
                     MessageBoxButton.OKCancel, MessageBoxImage.Warning))
