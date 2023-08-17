@@ -20,9 +20,13 @@
     <!-- certutil.exe -hashfile AutoUpdaterTest.zip MD5 --><!-- 升级包校验 -->
     <!--<checksum algorithm="MD5">d08c4cfec6ced093f01291ed19e8b78b</checksum>-->
     <!-- certutil.exe -hashfile AutoUpdaterTest.zip SHA256 --><!-- 升级包校验 -->
-    <checksum algorithm="SHA256">4fa82200669c06ed1a129c3231216b98da1a25e94667ea9eb6a0b21f23974adb</checksum>
+    <checksum algorithm="SHA256">
+        4fa82200669c06ed1a129c3231216b98da1a25e94667ea9eb6a0b21f23974adb
+    </checksum>
 </item>
 ```
+
+&emsp;&emsp;*由于json方式实现了`ParseUpdateInfoEvent`，可以引入`BaseUri`，使用相对路径。*
 
 ```json
 {
