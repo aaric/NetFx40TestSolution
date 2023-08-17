@@ -2,7 +2,7 @@
 
 [![C#](https://img.shields.io/badge/C%23-4.0-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![.NET Framework](https://img.shields.io/badge/.NET_Framework-4.0-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework)
-[![Release](https://img.shields.io/badge/Release-1.0.0-blue.svg)](https://github.com/aaric/NetFx40TestSolution/releases)
+[![Release](https://img.shields.io/badge/Release-1.1.0-blue.svg)](https://github.com/aaric/NetFx40TestSolution/releases)
 
 > .NET Framework 4.0 Sample.
 
@@ -27,8 +27,8 @@
 ```json
 {
   "version": "1.0.2.4",
-  "url": "http://127.0.0.1:8080/vs2013/test/AutoUpdaterTest.zip",
-  "changelog": "http://127.0.0.1:8080/vs2013/test/AutoUpdateChangeLog.html",
+  "url": "/vs2013/test/AutoUpdaterTest.zip",
+  "changelog": "/vs2013/test/AutoUpdateChangeLog.html",
   "mandatory": {
     "mode": 2,
     "value": false

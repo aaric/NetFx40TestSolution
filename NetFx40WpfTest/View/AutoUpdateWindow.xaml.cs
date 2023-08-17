@@ -8,6 +8,9 @@ namespace NetFx40WpfTest.View
 {
     /// <summary>
     /// AutoUpdateWindow.xaml 的交互逻辑
+    ///
+    /// <see cref="https://github.com/ravibpatel/AutoUpdater.NET"/>
+    /// <code>Install-Package AutoUpdater.NET.CredentialsFix -Version 1.0.5</code>
     /// </summary>
     public partial class AutoUpdateWindow : Window
     {
@@ -30,6 +33,7 @@ namespace NetFx40WpfTest.View
 
         private void JsonConfigParseUpdateInfoEvent(ParseUpdateInfoEventArgs args)
         {
+            string baseUri = "http://10.0.11.25:8021";
             dynamic config = JsonConvert.DeserializeObject(args.RemoteData);
             if (null != config)
             {
@@ -43,8 +47,8 @@ namespace NetFx40WpfTest.View
                 args.UpdateInfo = new UpdateInfoEventArgs
                 {
                     CurrentVersion = config.version,
-                    ChangelogURL = config.changelog,
-                    DownloadURL = config.url,
+                    DownloadURL = baseUri + config.url,
+                    ChangelogURL = baseUri + config.changelog,
                     Mandatory = config.mandatory.value,
                     UpdateMode = configUpdateMode,
                     HashingAlgorithm = config.checksum.hashingAlgorithm,
