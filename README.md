@@ -2,7 +2,7 @@
 
 [![C#](https://img.shields.io/badge/C%23-4.0-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![.NET Framework](https://img.shields.io/badge/.NET_Framework-4.0-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework)
-[![Release](https://img.shields.io/badge/Release-1.0.0-blue.svg)](https://github.com/aaric/NetFx40TestSolution/releases)
+[![Release](https://img.shields.io/badge/Release-1.1.0-blue.svg)](https://github.com/aaric/NetFx40TestSolution/releases)
 
 > .NET Framework 4.0 Sample.
 
@@ -20,15 +20,19 @@
     <!-- certutil.exe -hashfile AutoUpdaterTest.zip MD5 --><!-- 升级包校验 -->
     <!--<checksum algorithm="MD5">d08c4cfec6ced093f01291ed19e8b78b</checksum>-->
     <!-- certutil.exe -hashfile AutoUpdaterTest.zip SHA256 --><!-- 升级包校验 -->
-    <checksum algorithm="SHA256">4fa82200669c06ed1a129c3231216b98da1a25e94667ea9eb6a0b21f23974adb</checksum>
+    <checksum algorithm="SHA256">
+        4fa82200669c06ed1a129c3231216b98da1a25e94667ea9eb6a0b21f23974adb
+    </checksum>
 </item>
 ```
+
+&emsp;&emsp;*由于json方式实现了`ParseUpdateInfoEvent`，可以引入`BaseUri`，使用相对路径。*
 
 ```json
 {
   "version": "1.0.2.4",
-  "url": "http://127.0.0.1:8080/vs2013/test/AutoUpdaterTest.zip",
-  "changelog": "http://127.0.0.1:8080/vs2013/test/AutoUpdateChangeLog.html",
+  "url": "/vs2013/test/AutoUpdaterTest.zip",
+  "changelog": "/vs2013/test/AutoUpdateChangeLog.html",
   "mandatory": {
     "mode": 2,
     "value": false
