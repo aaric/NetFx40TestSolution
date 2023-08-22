@@ -11,6 +11,11 @@ namespace NetFx40WpfTest.View
     ///
     /// <see cref="https://github.com/ravibpatel/AutoUpdater.NET"/>
     /// <code>Install-Package AutoUpdater.NET.CredentialsFix -Version 1.0.5</code>
+    ///
+    /// <seealso cref="https://www.nuget.org/packages/AutoUpdater.NET.CredentialsFix"/>
+    /// <seealso cref="https://www.nuget.org/packages/Autoupdater.NET.SelfDriven"/>
+    /// <seealso cref="https://www.nuget.org/packages/Best.Client.AutoUpdate"/>
+    /// <seealso cref="https://www.nuget.org/packages/Zl.AutoUpgrade.Core"/>
     /// </summary>
     public partial class AutoUpdateWindow : Window
     {
@@ -20,7 +25,8 @@ namespace NetFx40WpfTest.View
 
             // 设置版本
             // VersionLabel.Content = "1.0.2.4";
-            VersionLabel.Content = Assembly.GetEntryAssembly().GetName().Version;
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            VersionLabel.Content = assembly.GetName().Version;
         }
 
         private void Update_JsonConfig_Button_OnClick(object sender, RoutedEventArgs e)
