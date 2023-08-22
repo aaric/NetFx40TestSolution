@@ -3,16 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         Title="HandyControlWindow" Height="600" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
         
-        <StackPanel Orientation="Vertical" Margin="10 10">
-            <Button Content="测试按钮" Style="{StaticResource ButtonPrimary}"
-                    hc:IconElement.Geometry="{StaticResource SuccessGeometry}" />
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Margin="10 10">
+                <Button Content="测试按钮" Style="{StaticResource ButtonPrimary}"
+                        hc:IconElement.Geometry="{StaticResource SuccessGeometry}" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical" Margin="10 10" Width="100">
+                <ProgressBar Value="50" hc:BorderElement.CornerRadius="10" />
+                <ProgressBar Value="50" Style="{StaticResource ProgressBarSuccess}" Margin="0, 5" />
+                <ProgressBar Value="50" Style="{StaticResource ProgressBarSuccessStripe}" Margin="0, 5" />
+                <ProgressBar Value="50" Style="{StaticResource ProgressBarFlat}" Margin="0, 5" />
+                <ProgressBar Value="50" Style="{StaticResource ProgressBarPrimaryStripe}" Orientation="Vertical" Width="25" Height="100" />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
