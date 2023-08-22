@@ -10,17 +10,30 @@
         </Grid.RowDefinitions>
         
         <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Vertical" Margin="10 10">
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
                 <Button Content="测试按钮" Style="{StaticResource ButtonPrimary}"
                         hc:IconElement.Geometry="{StaticResource SuccessGeometry}" />
             </StackPanel>
             
-            <StackPanel Orientation="Vertical" Margin="10 10" Width="100">
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
                 <ProgressBar Value="50" hc:BorderElement.CornerRadius="10" />
                 <ProgressBar Value="50" Style="{StaticResource ProgressBarSuccess}" Margin="0, 5" />
                 <ProgressBar Value="50" Style="{StaticResource ProgressBarSuccessStripe}" Margin="0, 5" />
                 <ProgressBar Value="50" Style="{StaticResource ProgressBarFlat}" Margin="0, 5" />
                 <ProgressBar Value="50" Style="{StaticResource ProgressBarPrimaryStripe}" Orientation="Vertical" Width="25" Height="100" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
+                <GroupBox Header="标题" Height="100" Style="{StaticResource GroupBoxTab}">
+                    <Border Background="{DynamicResource SuccessBrush}">
+                        <TextBlock Text="内容" />
+                    </Border>
+                </GroupBox>
+                <GroupBox Header="标题" hc:TitleElement.TitlePlacement="Left" Height="100" Style="{StaticResource GroupBoxOriginal}">
+                    <Border Background="{DynamicResource SuccessBrush}">
+                        <TextBlock Text="内容" />
+                    </Border>
+                </GroupBox>
             </StackPanel>
         </StackPanel>
     </Grid>
