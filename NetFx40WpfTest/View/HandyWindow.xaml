@@ -35,6 +35,14 @@
                     </Border>
                 </GroupBox>
             </StackPanel>
+            
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
+                <Expander Header="标题" IsExpanded="True" Height="100" hc:BorderElement.CornerRadius="5">
+                    <Border Background="{DynamicResource SuccessBrush}">
+                        <TextBlock Text="内容" />
+                    </Border>
+                </Expander>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
