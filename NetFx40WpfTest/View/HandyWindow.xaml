@@ -42,6 +42,11 @@
                         <TextBlock Text="内容" />
                     </Border>
                 </Expander>
+                
+                <Frame Content="标题" NavigationUIVisibility="Visible" Height="100" Margin="0, 5" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
             </StackPanel>
         </StackPanel>
     </Grid>
