@@ -31,8 +31,6 @@ namespace NetFx40WpfTest.View
 
         private void Update_JsonConfig_Button_OnClick(object sender, RoutedEventArgs e)
         {
-            AutoUpdater.ShowSkipButton = false;
-            AutoUpdater.ShowRemindLaterButton = false;
             AutoUpdater.ParseUpdateInfoEvent += JsonConfigParseUpdateInfoEvent;
             AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdate.json");
         }
@@ -48,6 +46,12 @@ namespace NetFx40WpfTest.View
                         out configUpdateMode))
                 {
                     configUpdateMode = Mode.Normal;
+                }
+
+                if (bool.Parse(config.mandatory.value.ToString()))
+                {
+                    AutoUpdater.ShowSkipButton = false;
+                    AutoUpdater.ShowRemindLaterButton = false;
                 }
 
                 args.UpdateInfo = new UpdateInfoEventArgs
