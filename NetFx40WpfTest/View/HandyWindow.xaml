@@ -85,6 +85,8 @@
             <StatusBarItem>用户名：admin</StatusBarItem>
             <Border Style="{StaticResource BorderVerticallySplitter}" Height="20" />
             <StatusBarItem>状态：正常</StatusBarItem>
+            <Separator />
+            <StatusBarItem>时间：2023-08-31</StatusBarItem>
             <StatusBarItem HorizontalContentAlignment="Right">版权所有</StatusBarItem>
         </StatusBar>
     </Grid>
