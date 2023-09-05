@@ -3,16 +3,91 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         Title="HandyControlWindow" Height="600" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        
-        <StackPanel Orientation="Vertical" Margin="10 10">
-            <Button Content="测试按钮" Style="{StaticResource ButtonPrimary}"
-                    hc:IconElement.Geometry="{StaticResource SuccessGeometry}" />
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
+                <Button Content="测试按钮" Style="{StaticResource ButtonPrimary}"
+                        hc:IconElement.Geometry="{StaticResource SuccessGeometry}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
+                <ProgressBar Value="50" hc:BorderElement.CornerRadius="10" />
+                <ProgressBar Value="50" Style="{StaticResource ProgressBarSuccess}" Margin="0, 5" />
+                <ProgressBar Value="50" Style="{StaticResource ProgressBarSuccessStripe}" Margin="0, 5" />
+                <ProgressBar Value="50" Style="{StaticResource ProgressBarFlat}" Margin="0, 5" />
+                <ProgressBar Value="50" Style="{StaticResource ProgressBarPrimaryStripe}" Orientation="Vertical"
+                             Width="25" Height="100" />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
+                <GroupBox Header="标题" Height="100" Style="{StaticResource GroupBoxTab}">
+                    <Border Background="{DynamicResource SuccessBrush}">
+                        <TextBlock Text="内容" />
+                    </Border>
+                </GroupBox>
+                <GroupBox Header="标题" hc:TitleElement.TitlePlacement="Left" Height="100"
+                          Style="{StaticResource GroupBoxOriginal}">
+                    <Border Background="{DynamicResource SuccessBrush}">
+                        <TextBlock Text="内容" />
+                    </Border>
+                </GroupBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
+                <Expander Header="标题" IsExpanded="True" Height="100" hc:BorderElement.CornerRadius="5">
+                    <Border Background="{DynamicResource SuccessBrush}">
+                        <TextBlock Text="内容" />
+                    </Border>
+                </Expander>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Width="200" Margin="10">
+                <Menu BorderThickness="1" BorderBrush="{StaticResource BorderBrush}"
+                      Effect="{StaticResource EffectShadow2}">
+                    <MenuItem Header="文件">
+                        <MenuItem Header="新增" />
+                        <MenuItem Header="保存" IsChecked="True" />
+                    </MenuItem>
+                </Menu>
+                
+                <ToolBar>
+                    <Button Content="新增" />
+                    <CheckBox Content="正常" />
+                </ToolBar>
+
+                <Frame Content="标题" NavigationUIVisibility="Visible" Height="100" Margin="0, 5" />
+
+                <StackPanel.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="复制" />
+                        <MenuItem Header="剪切" />
+                        <MenuItem Header="粘贴" />
+                        <MenuItem Header="自动识别" IsChecked="True" />
+                    </ContextMenu>
+                </StackPanel.ContextMenu>
+            </StackPanel>
         </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Width="100" Margin="10">
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Width="100" Margin="10" />
+        </StackPanel>
+                
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>用户名：admin</StatusBarItem>
+            <Border Style="{StaticResource BorderVerticallySplitter}" Height="20" />
+            <StatusBarItem>状态：正常</StatusBarItem>
+            <Separator />
+            <StatusBarItem>时间：2023-08-31</StatusBarItem>
+            <StatusBarItem HorizontalContentAlignment="Right">版权所有</StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
