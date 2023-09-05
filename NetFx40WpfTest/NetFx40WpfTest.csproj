@@ -132,10 +132,17 @@
     <Compile Include="View\AutoUpdateWindow.xaml.cs">
       <DependentUpon>AutoUpdateWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\HandyDemoWindow.xaml.cs">
+      <DependentUpon>HandyDemoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\HandyWindow.xaml.cs">
       <DependentUpon>HandyWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="View\AutoUpdateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HandyDemoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="NetFx40WpfTest.View.HandyDemoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HandyDemoWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="Gray">
+            <TextBlock Name="WowoText" Text="This is a long text that will be truncated with ellipsis."
+                       TextTrimming="CharacterEllipsis" />
+        </StackPanel>
+    </Grid>
+</Window>
