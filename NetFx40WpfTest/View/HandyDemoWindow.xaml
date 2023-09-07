@@ -2,7 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:hc="https://handyorg.github.io/handycontrol"
-        Title="HandyDemoWindow" Height="600" Width="800">
+        Title="HandyDemoWindow" Height="600" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=HandyDemo}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -22,24 +23,30 @@
         </StackPanel>-->
 
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <Border Style="{StaticResource BorderCircular}" BorderThickness="1" BorderBrush="LightGray" Margin="5" Padding="10 3">
-                <TextBox Style="{StaticResource TextBoxExtend}" FontFamily="{StaticResource IconFont}"
-                         hc:TitleElement.TitleWidth="20" hc:TitleElement.Title="&#xe601;" hc:TitleElement.Foreground="LightGray"
+            <Border Style="{StaticResource BorderCircular}" BorderThickness="1" BorderBrush="LightGray" Margin="5"
+                    Padding="10 3">
+                <TextBox Text="{Binding Account}" Style="{StaticResource TextBoxExtend}"
+                         FontFamily="{StaticResource IconFont}"
+                         hc:TitleElement.TitleWidth="20" hc:TitleElement.Title="&#xe601;"
+                         hc:TitleElement.Foreground="LightGray"
                          hc:TitleElement.TitlePlacement="Left"
                          hc:InfoElement.Placeholder="请输入账号"
                          BorderThickness="0" />
             </Border>
-            <Border Style="{StaticResource BorderCircular}" BorderThickness="1" BorderBrush="LightGray" Margin="5" Padding="10 3">
+            <Border Style="{StaticResource BorderCircular}" BorderThickness="1" BorderBrush="LightGray" Margin="5"
+                    Padding="10 3">
                 <hc:PasswordBox FontFamily="{StaticResource IconFont}"
-                             hc:TitleElement.TitleWidth="20" hc:TitleElement.Title="&#xe602;" hc:TitleElement.TitlePlacement="Left"
-                             hc:InfoElement.Placeholder="请输入密码"
-                             BorderThickness="0"
-                             ShowEyeButton="True" ShowClearButton="True" />
+                                hc:TitleElement.TitleWidth="20" hc:TitleElement.Title="&#xe602;"
+                                hc:TitleElement.TitlePlacement="Left"
+                                hc:InfoElement.Placeholder="请输入密码"
+                                BorderThickness="0"
+                                ShowEyeButton="True" ShowClearButton="True" />
             </Border>
 
             <Border Margin="5">
                 <Button Content="登录" Style="{StaticResource ButtonPrimary}" Width="250" Height="36"
-                        hc:BorderElement.CornerRadius="15" />
+                        hc:BorderElement.CornerRadius="15"
+                        Command="{Binding DefaultCommand}" CommandParameter="login" />
             </Border>
         </StackPanel>
     </Grid>

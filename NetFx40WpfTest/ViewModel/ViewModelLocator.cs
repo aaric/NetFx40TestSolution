@@ -42,16 +42,19 @@ namespace NetFx40WpfTest.ViewModel
             ////}
 
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<HandyDemoViewModel>();
         }
 
         public MainViewModel Main
         {
-            get
-            {
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
-            }
+            get { return ServiceLocator.Current.GetInstance<MainViewModel>(); }
         }
-        
+
+        public HandyDemoViewModel HandyDemo
+        {
+            get { return ServiceLocator.Current.GetInstance<HandyDemoViewModel>(); }
+        }
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
