@@ -15,6 +15,11 @@
                     <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True"
                                          xmlns:vm="clr-namespace:NetFx40WpfTest.ViewModel" />
                 </ResourceDictionary>
+
+                <!-- IconFont -->
+                <ResourceDictionary>
+                    <FontFamily x:Key="IconFont">Pack://application:,,,/Static/Fonts/#iconfont</FontFamily>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
