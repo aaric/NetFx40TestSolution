@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace NetFx40WpfTest.View
 {
     /// <summary>
     /// LiveChartWindow.xaml 的交互逻辑
+    ///
+    /// <see cref="https://github.com/Live-Charts/Live-Charts"/>
+    /// <code>Install-Package LiveCharts -Version 0.9.7</code>
     /// </summary>
     public partial class LiveChartWindow : Window
     {
