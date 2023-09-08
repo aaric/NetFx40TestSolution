@@ -72,6 +72,10 @@
       <HintPath>..\packages\HandyControl.3.4.0\lib\net40\HandyControl.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net40\LiveCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -139,11 +143,24 @@
     <Compile Include="View\HandyWindow.xaml.cs">
       <DependentUpon>HandyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LiveChartWindow.xaml.cs">
+      <DependentUpon>LiveChartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sub\Sub01Window.xaml.cs">
+      <DependentUpon>Sub01Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sub\Sub02Window.xaml.cs">
+      <DependentUpon>Sub02Window.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\AutoUpdateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\HandyDemoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LiveChartWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -160,6 +177,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\HandyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Sub\Sub01Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Sub\Sub02Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -216,6 +241,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
