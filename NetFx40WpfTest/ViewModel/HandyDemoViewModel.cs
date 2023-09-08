@@ -13,6 +13,7 @@ namespace NetFx40WpfTest.ViewModel
             DefaultCommand = new RelayCommand<string>(DefaultAction);
 
             Account = "admin";
+            Password = "123456";
         }
 
         private string _account;
@@ -27,12 +28,24 @@ namespace NetFx40WpfTest.ViewModel
             }
         }
 
+        private string _password;
+
+        public string Password
+        {
+            get { return _password; }
+            set
+            {
+                _password = value;
+                RaisePropertyChanged(() => Password);
+            }
+        }
+
         private async void DefaultAction(string cmd)
         {
             switch (cmd)
             {
                 case "login":
-                    MessageBox.Show("" + Account);
+                    MessageBox.Show(string.Format("{0} {1}", Account, Password));
                     break;
             }
         }

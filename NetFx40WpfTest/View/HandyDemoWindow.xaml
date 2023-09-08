@@ -40,7 +40,9 @@
                                 hc:TitleElement.TitlePlacement="Left"
                                 hc:InfoElement.Placeholder="请输入密码"
                                 BorderThickness="0"
-                                ShowEyeButton="True" ShowClearButton="True" />
+                                ShowEyeButton="True" ShowClearButton="True"
+                                IsSafeEnabled="False"
+                                UnsafePassword="{Binding Password}" />
             </Border>
 
             <Border Margin="5">
