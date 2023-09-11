@@ -45,6 +45,7 @@ namespace NetFx40WpfTest.ViewModel
             switch (cmd)
             {
                 case "login":
+                    // Application.Current.Dispatcher.Invoke(() => {});
                     MessageBox.Show(string.Format("{0} {1}", Account, Password));
                     break;
             }
