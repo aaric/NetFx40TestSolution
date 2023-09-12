@@ -36,7 +36,7 @@ namespace NetFx40WpfTest.ViewModel
 
             DefaultCommand = new RelayCommand<string>(DefaultAction);
 
-            FrameSource = new Uri("View/Sub/Page01.xaml", UriKind.Relative);
+            FrameSource = new Uri("../View/Main/Page01.xaml", UriKind.Relative);
         }
 
         private Uri _frameSource;
@@ -56,10 +56,10 @@ namespace NetFx40WpfTest.ViewModel
             switch (cmd)
             {
                 case "prev":
-                    FrameSource = new Uri("View/Sub/Page01.xaml", UriKind.Relative);
+                    FrameSource = new Uri("../View/Main/Page01.xaml", UriKind.Relative);
                     break;
                 case "next":
-                    FrameSource = new Uri("View/Sub/Page02.xaml", UriKind.Relative);
+                    FrameSource = new Uri("../View/Main/Page02.xaml", UriKind.Relative);
                     break;
             }
         }

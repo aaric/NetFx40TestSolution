@@ -14,6 +14,7 @@
 
 using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
+using NetFx40WpfTest.ViewModel.Main;
 
 namespace NetFx40WpfTest.ViewModel
 {
@@ -43,11 +44,17 @@ namespace NetFx40WpfTest.ViewModel
 
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<HandyDemoViewModel>();
+            SimpleIoc.Default.Register<Page01ViewModel>();
         }
 
         public MainViewModel Main
         {
             get { return ServiceLocator.Current.GetInstance<MainViewModel>(); }
+        }
+
+        public Page01ViewModel Page01
+        {
+            get { return ServiceLocator.Current.GetInstance<Page01ViewModel>(); }
         }
 
         public HandyDemoViewModel HandyDemo

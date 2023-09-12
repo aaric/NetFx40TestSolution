@@ -148,9 +148,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Toolkit\FrameHelper.cs" />
     <Compile Include="ViewModel\HandyDemoViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\Main\Page01ViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\AutoUpdateWindow.xaml.cs">
       <DependentUpon>AutoUpdateWindow.xaml</DependentUpon>
@@ -164,10 +164,10 @@
     <Compile Include="View\LiveChartWindow.xaml.cs">
       <DependentUpon>LiveChartWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Sub\Page01.xaml.cs">
+    <Compile Include="View\Main\Page01.xaml.cs">
       <DependentUpon>Page01.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Sub\Page02.xaml.cs">
+    <Compile Include="View\Main\Page02.xaml.cs">
       <DependentUpon>Page02.xaml</DependentUpon>
     </Compile>
     <Page Include="View\AutoUpdateWindow.xaml">
@@ -198,11 +198,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Sub\Page01.xaml">
+    <Page Include="View\Main\Page01.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Sub\Page02.xaml">
+    <Page Include="View\Main\Page02.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

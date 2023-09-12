@@ -40,7 +40,7 @@ namespace NetFx40WpfTest.ViewModel
             }
         }
 
-        private async void DefaultAction(string cmd)
+        private void DefaultAction(string cmd)
         {
             switch (cmd)
             {
