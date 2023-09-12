@@ -1,0 +1,8 @@
+﻿<Page x:Class="NetFx40WpfTest.View.Sub.Page01"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Page01">
+    <Grid>
+        <TextBlock Text="Page01" />
+    </Grid>
+</Page>
