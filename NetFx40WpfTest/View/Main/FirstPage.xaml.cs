@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using NetFx40WpfTest.ViewModel.Main;
 
 namespace NetFx40WpfTest.View.Main
 {
@@ -10,6 +11,11 @@ namespace NetFx40WpfTest.View.Main
         public FirstPage()
         {
             InitializeComponent();
+
+            if (DataContext is FirstViewModel viewModel)
+            {
+                viewModel.ThisPage = this;
+            }
         }
     }
 }
