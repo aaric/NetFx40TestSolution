@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NetFx40WpfTest.View.Sub
+namespace NetFx40WpfTest.View.Handy
 {
     /// <summary>
-    /// Page02.xaml 的交互逻辑
+    /// ButtonPage.xaml 的交互逻辑
     /// </summary>
-    public partial class Page02 : Page
+    public partial class ButtonPage : Page
     {
-        public Page02()
+        public ButtonPage()
         {
             InitializeComponent();
         }

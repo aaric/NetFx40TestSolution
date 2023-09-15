@@ -3,9 +3,9 @@ using GalaSoft.MvvmLight;
 
 namespace NetFx40WpfTest.ViewModel.Main
 {
-    public class Page01ViewModel : ViewModelBase
+    public class FirstViewModel : ViewModelBase
     {
-        public Page01ViewModel()
+        public FirstViewModel()
         {
             DataList = new ObservableCollection<DataVo>();
             for (int i = 0; i < 10; i++)

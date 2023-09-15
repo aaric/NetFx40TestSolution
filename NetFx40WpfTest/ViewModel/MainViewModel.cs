@@ -1,6 +1,7 @@
 using System;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using NLog;
 
 namespace NetFx40WpfTest.ViewModel
 {
@@ -18,6 +19,8 @@ namespace NetFx40WpfTest.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
         public RelayCommand<string> DefaultCommand { get; set; }
 
         /// <summary>
@@ -36,7 +39,9 @@ namespace NetFx40WpfTest.ViewModel
 
             DefaultCommand = new RelayCommand<string>(DefaultAction);
 
-            FrameSource = new Uri("../View/Main/Page01.xaml", UriKind.Relative);
+            FrameSource = new Uri("../View/Main/FirstPage.xaml", UriKind.Relative);
+
+            Log.Info("hello world");
         }
 
         private Uri _frameSource;
@@ -56,10 +61,10 @@ namespace NetFx40WpfTest.ViewModel
             switch (cmd)
             {
                 case "prev":
-                    FrameSource = new Uri("../View/Main/Page01.xaml", UriKind.Relative);
+                    FrameSource = new Uri("../View/Main/FirstPage.xaml", UriKind.Relative);
                     break;
                 case "next":
-                    FrameSource = new Uri("../View/Main/Page02.xaml", UriKind.Relative);
+                    FrameSource = new Uri("https://www.baidu.com");
                     break;
             }
         }

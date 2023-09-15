@@ -1,7 +1,7 @@
-﻿<Page x:Class="NetFx40WpfTest.View.Main.Page01"
+﻿<Page x:Class="NetFx40WpfTest.View.Main.FirstPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      DataContext="{Binding Source={StaticResource Locator}, Path=Page01}"
+      DataContext="{Binding Source={StaticResource Locator}, Path=MainFirst}"
       Title="Page01">
     <Page.Resources>
         <Style x:Key="WhiteDataGridColumnHeader" TargetType="DataGridColumnHeader">

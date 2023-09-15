@@ -44,7 +44,7 @@ namespace NetFx40WpfTest.ViewModel
 
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<HandyDemoViewModel>();
-            SimpleIoc.Default.Register<Page01ViewModel>();
+            SimpleIoc.Default.Register<FirstViewModel>();
         }
 
         public MainViewModel Main
@@ -52,9 +52,9 @@ namespace NetFx40WpfTest.ViewModel
             get { return ServiceLocator.Current.GetInstance<MainViewModel>(); }
         }
 
-        public Page01ViewModel Page01
+        public FirstViewModel MainFirst
         {
-            get { return ServiceLocator.Current.GetInstance<Page01ViewModel>(); }
+            get { return ServiceLocator.Current.GetInstance<FirstViewModel>(); }
         }
 
         public HandyDemoViewModel HandyDemo
