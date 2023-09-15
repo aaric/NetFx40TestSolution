@@ -8,7 +8,7 @@ namespace NetFx40WpfTest.ViewModel.Main
         public FirstViewModel()
         {
             DataList = new ObservableCollection<DataVo>();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
                 DataList.Add(new DataVo()
                 {
