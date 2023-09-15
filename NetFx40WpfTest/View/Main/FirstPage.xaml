@@ -2,14 +2,17 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       DataContext="{Binding Source={StaticResource Locator}, Path=MainFirst}"
-      Name="ThisPage" Title="Page01">
+      Title="Page01">
     <Grid>
         <DataGrid ItemsSource="{Binding DataList}" Style="{StaticResource CustomDataGrid}" Margin="20"
-                  HorizontalScrollBarVisibility="Auto" Height="{Binding ElementName=ThisPage,Path=ActualHeight}">
+                  HorizontalScrollBarVisibility="Auto">
             <DataGrid.Columns>
-                <DataGridTextColumn ElementStyle="{StaticResource CustomDataGridTextColumn}" Header="NO." Binding="{Binding Id}" />
-                <DataGridTextColumn ElementStyle="{StaticResource CustomDataGridTextColumn}" Header="Name" Binding="{Binding Name}" />
-                <DataGridTextColumn ElementStyle="{StaticResource CustomDataGridTextColumn}" Header="Title" Binding="{Binding Title}" />
+                <DataGridTextColumn Header="NO." Binding="{Binding Id}"
+                                    ElementStyle="{StaticResource CustomDataGridTextColumn}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"
+                                    ElementStyle="{StaticResource CustomDataGridTextColumn}" />
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}"
+                                    ElementStyle="{StaticResource CustomDataGridTextColumn}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
