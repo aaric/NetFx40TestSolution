@@ -20,6 +20,58 @@
                 <ResourceDictionary>
                     <FontFamily x:Key="IconFont">Pack://application:,,,/Static/Fonts/#iconfont</FontFamily>
                 </ResourceDictionary>
+
+                <!-- Custom Style -->
+                <ResourceDictionary>
+                    <!-- Custom DataGrid Group -->
+                    <Style x:Key="CustomDataGridColumnHeader" TargetType="DataGridColumnHeader">
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="Height" Value="40" />
+                    </Style>
+                    <Style x:Key="CustomDataGridRow" TargetType="DataGridRow">
+                        <Style.Setters>
+                            <Setter Property="Height" Value="40" />
+                        </Style.Setters>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#fafafa" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="Gray" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style x:Key="CustomDataGridCell" TargetType="DataGridCell">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="Gray" />
+                                <Setter Property="BorderBrush" Value="Gray" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style x:Key="CustomDataGrid" TargetType="DataGrid">
+                        <Setter Property="Margin" Value="0, 10" />
+                        <Setter Property="AutoGenerateColumns" Value="False" />
+                        <Setter Property="CanUserAddRows" Value="False" />
+                        <Setter Property="IsReadOnly" Value="True" />
+                        <Setter Property="ColumnWidth" Value="*" />
+                        <Setter Property="RowHeaderWidth" Value="0" />
+                        <!--<Setter Property="SelectionUnit" Value="Cell" />-->
+                        <Setter Property="ColumnHeaderStyle" Value="{StaticResource CustomDataGridColumnHeader}" />
+                        <Setter Property="RowStyle" Value="{StaticResource CustomDataGridRow}" />
+                        <Setter Property="CellStyle" Value="{StaticResource CustomDataGridCell}" />
+                        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+                        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+                        <Setter Property="BorderBrush" Value="#e4e5e7" />
+                        <Setter Property="HorizontalGridLinesBrush" Value="#e4e5e7" />
+                        <Setter Property="VerticalGridLinesBrush" Value="#e4e5e7" />
+                    </Style>
+                    <Style x:Key="CustomDataGridTextColumn" TargetType="TextBlock">
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                    </Style>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

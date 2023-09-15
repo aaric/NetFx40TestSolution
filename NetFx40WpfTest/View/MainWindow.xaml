@@ -5,12 +5,19 @@
         DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Prev" Command="{Binding DefaultCommand}" CommandParameter="prev" />
-                <Button Content="Next" Command="{Binding DefaultCommand}" CommandParameter="next" />
-            </StackPanel>
-            <Frame Source="{Binding FrameSource}" NavigationUIVisibility="Hidden" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="Prev" Command="{Binding DefaultCommand}" CommandParameter="prev" />
+            <Button Content="Next" Command="{Binding DefaultCommand}" CommandParameter="next" />
+        </StackPanel>
+        
+        <StackPanel Name="FrameStackPanel" Grid.Row="1">
+            <Frame Source="{Binding FrameSource}" NavigationUIVisibility="Hidden" BorderThickness="0"
+                   Height="{Binding ElementName=FrameStackPanel,Path=ActualHeight}" />
         </StackPanel>
     </Grid>
 </Window>
