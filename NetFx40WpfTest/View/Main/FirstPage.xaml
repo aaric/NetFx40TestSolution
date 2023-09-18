@@ -8,7 +8,7 @@
             <RowDefinition Height="30" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
+
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Content="Add" Style="{StaticResource ButtonPrimary}"
                     Command="{Binding DefaultCommand}"
@@ -18,16 +18,27 @@
                     Command="{Binding DefaultCommand}"
                     CommandParameter="test" />
         </StackPanel>
-        
-        <DataGrid Name="MyDataGrid" Grid.Row="1" ItemsSource="{Binding DataList}" Style="{StaticResource CustomDataGrid}"
+
+        <DataGrid Name="MyDataGrid" Grid.Row="1" ItemsSource="{Binding DataList}"
+                  Style="{StaticResource DataGridCustom}"
                   HorizontalScrollBarVisibility="Auto">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DataGridColumnHeaderCustom}">
+                    <Setter Property="Height" Value="25" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow" BasedOn="{StaticResource DataGridRowCustom}">
+                    <Setter Property="Height" Value="25" />
+                </Style>
+            </DataGrid.RowStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="NO." Binding="{Binding Id}"
-                                    ElementStyle="{StaticResource CustomDataGridTextColumn}" />
+                                    ElementStyle="{StaticResource DataGridTextColumnCustom}" />
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"
-                                    ElementStyle="{StaticResource CustomDataGridTextColumn}" />
+                                    ElementStyle="{StaticResource DataGridTextColumnCustom}" />
                 <DataGridTextColumn Header="Title" Binding="{Binding Title}"
-                                    ElementStyle="{StaticResource CustomDataGridTextColumn}" />
+                                    ElementStyle="{StaticResource DataGridTextColumnCustom}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

@@ -12,7 +12,8 @@ namespace NetFx40WpfTest.View.Main
         {
             InitializeComponent();
 
-            if (DataContext is FirstViewModel viewModel)
+            FirstViewModel viewModel = DataContext as FirstViewModel;
+            if (null != viewModel)
             {
                 viewModel.ThisPage = this;
             }
