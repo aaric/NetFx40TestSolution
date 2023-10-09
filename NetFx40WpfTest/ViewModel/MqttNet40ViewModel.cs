@@ -33,7 +33,7 @@ namespace NetFx40WpfTest.ViewModel
                 {
                     case "connect":
                         // 初始化设置
-                        string clientId = "clientId";
+                        string clientId = "csharp-client";
                         MqttClientOptions options = new MqttClientOptionsBuilder()
                             .WithClientId(clientId)
                             .WithTcpServer("10.0.11.80", 1883)

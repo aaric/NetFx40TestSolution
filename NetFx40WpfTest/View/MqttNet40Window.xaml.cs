@@ -3,7 +3,7 @@
 namespace NetFx40WpfTest.View
 {
     /// <summary>
-    /// MQTTnet40Window.xaml 的交互逻辑
+    /// MqttNet40Window.xaml 的交互逻辑
     ///
     /// <see cref="https://www.nuget.org/packages/MQTTnet40"/>
     /// <code>Install-Package MQTTnet40 -Version 1.0.0</code>
