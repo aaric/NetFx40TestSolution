@@ -4,7 +4,7 @@
       <vm:ViewModelLocator xmlns:vm="clr-namespace:NetFx40WpfTest"
                            x:Key="Locator" />
   </Application.Resources>
-  
+
   In the View:
   DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
 
@@ -45,6 +45,7 @@ namespace NetFx40WpfTest.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<HandyDemoViewModel>();
             SimpleIoc.Default.Register<FirstViewModel>();
+            SimpleIoc.Default.Register<MqttNet40ViewModel>();
         }
 
         public MainViewModel Main
@@ -60,6 +61,11 @@ namespace NetFx40WpfTest.ViewModel
         public HandyDemoViewModel HandyDemo
         {
             get { return ServiceLocator.Current.GetInstance<HandyDemoViewModel>(); }
+        }
+
+        public MqttNet40ViewModel MqttNet40
+        {
+            get { return ServiceLocator.Current.GetInstance<MqttNet40ViewModel>(); }
         }
 
         public static void Cleanup()

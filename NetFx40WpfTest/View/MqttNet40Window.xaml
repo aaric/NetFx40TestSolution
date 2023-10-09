@@ -1,0 +1,11 @@
+﻿<Window x:Class="NetFx40WpfTest.View.MqttNet40Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MqttNet40}"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Button Content="测试连接" Command="{Binding DefaultCommand}"
+                CommandParameter="connect" />
+    </StackPanel>
+</Window>
