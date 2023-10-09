@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Text;
 using System.Windows;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using NLog;
 using uPLibrary.Networking.M2Mqtt;
+using uPLibrary.Networking.M2Mqtt.Messages;
 
 namespace NetFx40WpfTest.ViewModel
 {
@@ -25,13 +27,14 @@ namespace NetFx40WpfTest.ViewModel
                 switch (cmd)
                 {
                     case "connect":
-                        MqttClient client = new MqttClient("10.0.11.80", 1883,
-                            false, null, null, null);
-                        client.Connect("csharp-client");
+                        string clientId = "csharp-client";
+                        MqttClient client = new MqttClient("10.0.11.80", 1883, false, null);
+                        client.Connect(clientId, "test", "test");
                         if (client.IsConnected)
                         {
-                            Log.Info("ok");
-                            MessageBox.Show("ok");
+                            client.Publish(string.Format("/test/topic/{0}", clientId),
+                                Encoding.UTF8.GetBytes("hello word"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+                            Log.Info("send ok");
                         }
 
                         break;
