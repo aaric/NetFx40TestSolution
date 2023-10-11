@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HttpClientTests.cs" />
+    <Compile Include="LangTests.cs" />
     <Compile Include="M2MqttTests.cs" />
     <Compile Include="MQTTnet40Tests.cs" />
     <Compile Include="NLuaTests.cs" />

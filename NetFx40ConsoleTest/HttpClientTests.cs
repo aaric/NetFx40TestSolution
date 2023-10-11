@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NetFx40ConsoleTest
 {
-    class HttpClientTests
+    public class HttpClientTests
     {
 
         private static IDictionary<string, string> _headers = new Dictionary<string, string>()
