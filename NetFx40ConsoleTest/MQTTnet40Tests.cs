@@ -19,7 +19,7 @@ namespace NetFx40ConsoleTest
     ///
     /// <code>Install-Package MQTTnet40 -Version 1.0.0</code>
     /// </summary>
-    public class MQTTnet40Test
+    public class MQTTnet40Tests
     {
         public static void Main1(string[] args)
         {

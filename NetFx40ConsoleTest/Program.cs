@@ -4,12 +4,12 @@
     {
         static void Main(string[] args)
         {
-            //WaitForMultipleObjectsTest.Main1(null);
-            //NLuaTest.Main1(null);
-            //M2MqttTest.Main1(null);
-            //MQTTnet40Test.Main1(null);
-            //XPath2Test.Main1(null);
-            HttpClientTest.Main1(null).Wait();
+            //WaitForMultipleObjectsTests.Main1(null);
+            //NLuaTests.Main1(null);
+            //M2MqttTests.Main1(null);
+            //MQTTnet40Tests.Main1(null);
+            //XPath2Tests.Main1(null);
+            //HttpClientTests.Main1(null).Wait();
         }
     }
 }

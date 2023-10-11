@@ -9,7 +9,7 @@ namespace NetFx40ConsoleTest
     ///
     /// <code>dotnet add package NLua --version 1.3.2.1</code>
     /// </summary>
-    class NLuaTest
+    class NLuaTests
     {
         public static void Main1(string[] args)
         {

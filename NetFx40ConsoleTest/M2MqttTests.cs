@@ -10,7 +10,7 @@ namespace NetFx40ConsoleTest
     ///
     /// <code>Install-Package M2Mqtt -Version 4.1.0</code>
     /// </summary>
-    public class M2MqttTest
+    public class M2MqttTests
     {
         public static void Main1(string[] args)
         {

@@ -98,10 +98,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HttpClientTest.cs" />
-    <Compile Include="M2MqttTest.cs" />
-    <Compile Include="MQTTnet40Test.cs" />
-    <Compile Include="NLuaTest.cs" />
+    <Compile Include="HttpClientTests.cs" />
+    <Compile Include="M2MqttTests.cs" />
+    <Compile Include="MQTTnet40Tests.cs" />
+    <Compile Include="NLuaTests.cs" />
     <Compile Include="WaitForMultipleObjectsTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
