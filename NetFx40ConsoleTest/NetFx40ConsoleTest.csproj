@@ -99,7 +99,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessTests.cs" />
+    <Compile Include="AccessRuntimeTests.cs" />
     <Compile Include="HttpClientTests.cs" />
     <Compile Include="LangTests.cs" />
     <Compile Include="M2MqttTests.cs" />

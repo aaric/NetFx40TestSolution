@@ -179,6 +179,7 @@
     <Compile Include="Job\MainTestDataJob.cs" />
     <Compile Include="Toolkit\MQTTClientHelper.cs" />
     <Compile Include="Toolkit\QuartzHelper.cs" />
+    <Compile Include="ViewModel\AccessRuntimeViewModel.cs" />
     <Compile Include="ViewModel\HandyDemoViewModel.cs" />
     <Compile Include="ViewModel\LiveChartViewModel.cs" />
     <Compile Include="ViewModel\M2MqttViewModel.cs" />
@@ -186,6 +187,9 @@
     <Compile Include="ViewModel\Main\FirstViewModel.cs" />
     <Compile Include="ViewModel\MqttNet40ViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\AccessRuntimeWindow.xaml.cs">
+      <DependentUpon>AccessRuntimeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AutoUpdateWindow.xaml.cs">
       <DependentUpon>AutoUpdateWindow.xaml</DependentUpon>
     </Compile>
@@ -216,6 +220,10 @@
     <Compile Include="View\MqttNet40Window.xaml.cs">
       <DependentUpon>MqttNet40Window.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AccessRuntimeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AutoUpdateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

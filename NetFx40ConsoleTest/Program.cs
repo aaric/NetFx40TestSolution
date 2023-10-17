@@ -11,7 +11,7 @@
             //XPath2Tests.Main1(null);
             //HttpClientTests.Main1(null).Wait();
             //LangTests.Main1(null);
-            AccessTests.Main1(null);
+            AccessRuntimeTests.Main1(null);
         }
     }
 }

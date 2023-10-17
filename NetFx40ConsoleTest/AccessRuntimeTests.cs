@@ -10,7 +10,7 @@ namespace NetFx40ConsoleTest
     ///
     /// <code>FreeSql.Provider.MsAccess --version 3.2.801</code>
     /// </summary>
-    public class AccessTests
+    public class AccessRuntimeTests
     {
         public static void Main1(string[] args)
         {
@@ -33,9 +33,10 @@ namespace NetFx40ConsoleTest
                 {
                     Console.WriteLine("{0} - {1}", row["xh"], row["symc"]);
                 }
-            }
 
-            connection.Close();
+                // close
+                connection.Close();
+            }
         }
     }
 }

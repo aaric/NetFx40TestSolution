@@ -47,6 +47,7 @@ namespace NetFx40WpfTest.ViewModel
             SimpleIoc.Default.Register<FirstViewModel>();
             SimpleIoc.Default.Register<MqttNet40ViewModel>();
             SimpleIoc.Default.Register<M2MqttViewModel>();
+            SimpleIoc.Default.Register<AccessRuntimeViewModel>();
         }
 
         public MainViewModel Main
@@ -72,6 +73,11 @@ namespace NetFx40WpfTest.ViewModel
         public M2MqttViewModel M2Mqtt
         {
             get { return ServiceLocator.Current.GetInstance<M2MqttViewModel>(); }
+        }
+
+        public AccessRuntimeViewModel AccessRuntime
+        {
+            get { return ServiceLocator.Current.GetInstance<AccessRuntimeViewModel>(); }
         }
 
         public static void Cleanup()
