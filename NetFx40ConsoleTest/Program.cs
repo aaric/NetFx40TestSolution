@@ -10,7 +10,8 @@
             //MQTTnet40Tests.Main1(null);
             //XPath2Tests.Main1(null);
             //HttpClientTests.Main1(null).Wait();
-            LangTests.Main1(null);
+            //LangTests.Main1(null);
+            AccessTests.Main1(null);
         }
     }
 }

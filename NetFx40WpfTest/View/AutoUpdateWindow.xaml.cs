@@ -10,7 +10,7 @@ namespace NetFx40WpfTest.View
     /// AutoUpdateWindow.xaml 的交互逻辑
     ///
     /// <see cref="https://github.com/ravibpatel/AutoUpdater.NET"/>
-    /// <code>Install-Package AutoUpdater.NET.CredentialsFix -Version 1.0.5</code>
+    /// <code>Install-Package Autoupdater.NET.Official -Version 1.6.4</code>
     ///
     /// <seealso cref="https://www.nuget.org/packages/AutoUpdater.NET.CredentialsFix"/>
     /// <seealso cref="https://www.nuget.org/packages/Autoupdater.NET.SelfDriven"/>
@@ -60,9 +60,10 @@ namespace NetFx40WpfTest.View
                     DownloadURL = baseUri + config.url,
                     ChangelogURL = baseUri + config.changelog,
                     Mandatory = config.mandatory.value,
-                    UpdateMode = configUpdateMode,
-                    HashingAlgorithm = config.checksum.hashingAlgorithm,
-                    Checksum = config.checksum.value
+                    // TODO update to official
+                    //UpdateMode = configUpdateMode,
+                    //HashingAlgorithm = config.checksum.hashingAlgorithm,
+                    //Checksum = config.checksum.value
                 };
             }
         }

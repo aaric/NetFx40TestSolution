@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <LangVersion>5</LangVersion>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>b969c8d6</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -98,6 +99,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessTests.cs" />
     <Compile Include="HttpClientTests.cs" />
     <Compile Include="LangTests.cs" />
     <Compile Include="M2MqttTests.cs" />
