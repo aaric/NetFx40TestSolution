@@ -177,7 +177,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Job\MainTestDataJob.cs" />
+    <Compile Include="Toolkit\ExceptionHelper.cs" />
     <Compile Include="Toolkit\MQTTClientHelper.cs" />
+    <Compile Include="Toolkit\NetworkHelper.cs" />
     <Compile Include="Toolkit\QuartzHelper.cs" />
     <Compile Include="ViewModel\AccessRuntimeViewModel.cs" />
     <Compile Include="ViewModel\HandyDemoViewModel.cs" />
