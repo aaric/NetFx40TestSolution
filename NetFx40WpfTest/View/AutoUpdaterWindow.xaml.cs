@@ -10,10 +10,6 @@ namespace NetFx40WpfTest.View
     ///
     /// <see cref="https://github.com/ravibpatel/AutoUpdater.NET/tree/v1.6.4"/>
     /// <code>Install-Package Autoupdater.NET.Official -Version 1.6.4</code>
-    ///
-    /// <seealso cref="https://www.nuget.org/packages/Autoupdater.NET.SelfDriven"/>
-    /// <seealso cref="https://www.nuget.org/packages/Best.Client.AutoUpdate"/>
-    /// <seealso cref="https://www.nuget.org/packages/Zl.AutoUpgrade.Core"/>
     /// </summary>
     public partial class AutoUpdaterWindow : Window
     {
