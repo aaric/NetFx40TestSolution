@@ -192,8 +192,8 @@
     <Compile Include="View\AccessRuntimeWindow.xaml.cs">
       <DependentUpon>AccessRuntimeWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AutoUpdateWindow.xaml.cs">
-      <DependentUpon>AutoUpdateWindow.xaml</DependentUpon>
+    <Compile Include="View\AutoUpdaterWindow.xaml.cs">
+      <DependentUpon>AutoUpdaterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HandyDemoWindow.xaml.cs">
       <DependentUpon>HandyDemoWindow.xaml</DependentUpon>
@@ -226,7 +226,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AutoUpdateWindow.xaml">
+    <Page Include="View\AutoUpdaterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
