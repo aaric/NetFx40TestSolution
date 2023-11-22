@@ -1,0 +1,14 @@
+{
+  "version": "1.2.2.0",
+  "url": "/vs2013/test/AutoUpdaterTest.zip",
+  "changelog": "/vs2013/test/AutoUpdaterChangeLog.html",
+  "mandatory": {
+    "mode": 1,
+    "minVersion": "1.0.0.0",
+    "value": false
+  },
+  "checksum": {
+    "hashingAlgorithm": "SHA256",
+    "value": "2998416ccd3a090db274fc9b32ee5157849636638a56342cce9d6fa1006e75a3"
+  }
+}

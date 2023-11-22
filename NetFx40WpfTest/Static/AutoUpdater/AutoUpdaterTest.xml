@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+    <!-- 升级版本 -->
+    <version>1.2.2.0</version>
+    <!-- 升级包下载路径 -->
+    <url>http://10.0.11.25:8021/vs2013/test/AutoUpdaterTest.zip</url>
+    <!-- 升级日志 -->
+    <changelog>http://10.0.11.25:8021/vs2013/test/AutoUpdaterChangeLog.html</changelog>
+    <!-- 是否强制升级：false-否，true-是 -->
+    <!-- 模式属性：1-隐藏更新对话框上的“关闭”按钮，2-跳过更新对话框并自动开始下载和更新应用程序 -->
+    <mandatory mode="2" minVersion="1.0.0.0">false</mandatory>
+    <!-- 升级包校验：certutil.exe -hashfile AutoUpdaterTest.zip MD5 -->
+    <!--<checksum algorithm="MD5">51603a7ee91eb8e5410a2502481a4dda</checksum>-->
+    <!-- 升级包校验：certutil.exe -hashfile AutoUpdaterTest.zip SHA256 -->
+    <checksum algorithm="SHA256">2998416ccd3a090db274fc9b32ee5157849636638a56342cce9d6fa1006e75a3</checksum>
+</item>
