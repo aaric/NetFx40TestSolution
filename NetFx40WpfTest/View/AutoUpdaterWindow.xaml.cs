@@ -45,9 +45,6 @@ namespace NetFx40WpfTest.View
 
         private void Update_JsonConfig_Button_OnClick(object sender, RoutedEventArgs e)
         {
-            AutoUpdater.ShowSkipButton = false;
-            AutoUpdater.ShowRemindLaterButton = false;
-
             AutoUpdater.ParseUpdateInfoEvent += JsonConfigParseUpdateInfoEvent;
             AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdaterTest.json");
         }
@@ -55,24 +52,34 @@ namespace NetFx40WpfTest.View
         private void JsonConfigParseUpdateInfoEvent(ParseUpdateInfoEventArgs args)
         {
             string baseUri = "http://10.0.11.25:8021";
-            dynamic configJson = JsonConvert.DeserializeObject(args.RemoteData);
-            args.UpdateInfo = new UpdateInfoEventArgs
+            dynamic jsonConfig = JsonConvert.DeserializeObject(args.RemoteData);
+            
+            if (null != jsonConfig && bool.Parse(jsonConfig.mandatory.value.ToString()))
             {
-                CurrentVersion = configJson.version,
-                ChangelogURL = configJson.changelog,
-                DownloadURL = configJson.url,
-                Mandatory = new Mandatory
+                AutoUpdater.ShowSkipButton = false;
+                AutoUpdater.ShowRemindLaterButton = false;
+            }
+
+            if (null != jsonConfig)
+            {
+                args.UpdateInfo = new UpdateInfoEventArgs
                 {
-                    Value = configJson.mandatory.value,
-                    UpdateMode = configJson.mandatory.mode,
-                    MinimumVersion = configJson.mandatory.minVersion
-                },
-                CheckSum = new CheckSum
-                {
-                    Value = configJson.checksum.value,
-                    HashingAlgorithm = configJson.checksum.hashingAlgorithm
-                }
-            };
+                    CurrentVersion = jsonConfig.version,
+                    ChangelogURL = baseUri + jsonConfig.changelog,
+                    DownloadURL = baseUri + jsonConfig.url,
+                    Mandatory = new Mandatory
+                    {
+                        Value = jsonConfig.mandatory.value,
+                        UpdateMode = jsonConfig.mandatory.mode,
+                        MinimumVersion = jsonConfig.mandatory.minVersion
+                    },
+                    CheckSum = new CheckSum
+                    {
+                        Value = jsonConfig.checksum.value,
+                        HashingAlgorithm = jsonConfig.checksum.hashingAlgorithm
+                    }
+                }; 
+            }
         }
     }
 }
