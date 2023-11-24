@@ -6,9 +6,9 @@
 
 > .NET Framework 4.0 Sample.
 
-## [Autoupdater.NET.Official](https://github.com/ravibpatel/AutoUpdater.NET/tree/v1.6.4)
+## 1 [Autoupdater.NET.Official](https://github.com/ravibpatel/AutoUpdater.NET/tree/v1.6.4)
 
-1. AutoUpdate.xml | AutoUpdate.json
+### 1.1 AutoUpdate.xml | AutoUpdate.json
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -48,7 +48,7 @@
 }
 ```
 
-2. AutoUpdateChangeLog.html
+### 1.2 AutoUpdateChangeLog.html
 
 ```html
 <!DOCTYPE html>
@@ -63,7 +63,7 @@
 </html>
 ```
 
-3. AutoUpdaterTest.zip
+### 1.3 AutoUpdaterTest.zip
 
 ```powershell
 # md5
@@ -73,4 +73,6 @@ certutil.exe -hashfile AutoUpdaterTest.zip MD5
 certutil.exe -hashfile AutoUpdaterTest.zip SHA256
 ```
 
+## 2 [Microsoft Visual Studio 2013 Installer Projects](https://marketplace.visualstudio.com/items?itemName=UnniRavindranathan-MSFT.MicrosoftVisualStudio2013InstallerProjects)
 
+&emsp;&emsp;*略。*
