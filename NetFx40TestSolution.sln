@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFx40ConsoleTest", "NetFx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFx40WpfTest", "NetFx40WpfTest\NetFx40WpfTest.csproj", "{09CB6C5A-9B43-4418-848C-1B97983A524F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NetFx40TestSetup", "NetFx40TestSetup\NetFx40TestSetup.vdproj", "{668ED27E-24F3-4520-B2E0-DEB69A520FA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{09CB6C5A-9B43-4418-848C-1B97983A524F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09CB6C5A-9B43-4418-848C-1B97983A524F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09CB6C5A-9B43-4418-848C-1B97983A524F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{668ED27E-24F3-4520-B2E0-DEB69A520FA0}.Debug|Any CPU.ActiveCfg = Debug
+		{668ED27E-24F3-4520-B2E0-DEB69A520FA0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
