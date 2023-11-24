@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
@@ -11,8 +12,19 @@ namespace NetFx40WpfTest
     /// </summary>
     public partial class App : Application
     {
+        // 设置应用程序单列运行
+        private static Mutex _mutex;
+
         protected override void OnStartup(StartupEventArgs e)
         {
+            // 单列运行逻辑
+            _mutex = new Mutex(true, "NetFx40WpfTest", out bool flag);
+            if (!flag)
+            {
+                MessageBox.Show("应用程序已运行！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Environment.Exit(0);
+            }
+
             // UI异常处理
             DispatcherUnhandledException += App_DispatcherUnhandledException;
 
