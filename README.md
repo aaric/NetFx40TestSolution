@@ -2,7 +2,7 @@
 
 [![C#](https://img.shields.io/badge/C%23-4.0-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![.NET Framework](https://img.shields.io/badge/.NET_Framework-4.0-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework)
-[![Release](https://img.shields.io/badge/Release-1.2.0-blue.svg)](https://github.com/aaric/NetFx40TestSolution/releases)
+[![Release](https://img.shields.io/badge/Release-1.3.0-blue.svg)](https://github.com/aaric/NetFx40TestSolution/releases)
 
 > .NET Framework 4.0 Sample.
 
