@@ -370,18 +370,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0B84427F0B1D80E0F96366060233A82D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_948804BBE63F0B92854DA874D1318569"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_384218468F1246B7B8BDF561809C10DA"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -565,6 +553,18 @@
         "OwnerKey" = "8:_9623AB8EEDCFD752B736E754EEEE5E52"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0B84427F0B1D80E0F96366060233A82D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_948804BBE63F0B92854DA874D1318569"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -622,6 +622,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -1781,17 +1789,17 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:测试客户端"
+        "ProductName" = "8:NetFx40Test"
         "ProductCode" = "8:{CDE97F76-5AF1-4C96-B7DF-1768AAB4688F}"
-        "PackageCode" = "8:{4BFD56CE-25DB-4A5D-8371-5B214077462C}"
+        "PackageCode" = "8:{AA33B702-4CCE-4735-AB8B-D880AE34D3CE}"
         "UpgradeCode" = "8:{871FFC48-0C17-4811-9BC8-12331C055291}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:测试公司"
+        "Manufacturer" = "8:TestInstall"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:NetFx40TestSetup"

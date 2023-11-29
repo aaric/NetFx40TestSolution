@@ -1,0 +1,16 @@
+﻿<Window x:Class="NetFx40WpfTest.View.NetworkChangeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=NetworkChange}"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Height="200">
+            <TextBlock />
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <Button Content="测试" Command="{Binding DefaultCommand}"
+                    CommandParameter="test" />
+        </StackPanel>
+    </DockPanel>
+</Window>
