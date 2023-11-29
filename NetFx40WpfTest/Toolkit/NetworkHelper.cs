@@ -1,4 +1,5 @@
-﻿using System.Net.NetworkInformation;
+﻿using System;
+using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using NLog;
 
@@ -37,9 +38,9 @@ namespace NetFx40WpfTest.Toolkit
                     flag = true;
                 }
             }
-            catch (PingException e)
+            catch (Exception e)
             {
-                Log.Error(e);
+                Log.Trace(e);
             }
 
             return flag;

@@ -20,7 +20,8 @@ namespace NetFx40WpfTest
         // 启动应用程序互斥量
         private static Mutex _mutex;
 
-        private static bool? IsNetworkAvailable;
+        // 启动应用时检查网络，同时监听网络环境
+        private static bool IsNetworkAvailable = NetworkHelper.IsNetworkAvailable();
 
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -65,11 +66,10 @@ namespace NetFx40WpfTest
             ExceptionHelper.Process(e.Exception);
         }
 
-        private void ShowNetworkAvailableLog(bool state)
+        private void ShowNetworkStateLog(bool state)
         {
-
             bool isLog = false;
-            if (null == IsNetworkAvailable || state != IsNetworkAvailable)
+            if (state != IsNetworkAvailable)
             {
                 IsNetworkAvailable = state;
                 isLog = true;
@@ -96,12 +96,12 @@ namespace NetFx40WpfTest
                 Log.Debug("NetworkChange_OnNetworkAddressChanged -> name={}, status={}", adapter.Name,
                     adapter.OperationalStatus);
             }*/
-            ShowNetworkAvailableLog(NetworkHelper.IsNetworkAvailable());
+            ShowNetworkStateLog(NetworkHelper.IsNetworkAvailable() || NetworkHelper.IsPingOk("www.baidu.com"));
         }
 
         private void NetworkChange_OnNetworkAvailabilityChanged(object sender, NetworkAvailabilityEventArgs e)
         {
-            ShowNetworkAvailableLog(e.IsAvailable);
+            ShowNetworkStateLog(e.IsAvailable);
         }
     }
 }
