@@ -188,6 +188,7 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\Main\FirstViewModel.cs" />
     <Compile Include="ViewModel\MqttNet40ViewModel.cs" />
+    <Compile Include="ViewModel\NetworkChangeViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\AccessRuntimeWindow.xaml.cs">
       <DependentUpon>AccessRuntimeWindow.xaml</DependentUpon>
@@ -221,6 +222,9 @@
     </Compile>
     <Compile Include="View\MqttNet40Window.xaml.cs">
       <DependentUpon>MqttNet40Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NetworkChangeWindow.xaml.cs">
+      <DependentUpon>NetworkChangeWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="View\AccessRuntimeWindow.xaml">
       <SubType>Designer</SubType>
@@ -275,6 +279,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MqttNet40Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NetworkChangeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
