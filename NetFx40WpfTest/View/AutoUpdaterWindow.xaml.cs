@@ -2,6 +2,7 @@
 using System.Windows;
 using AutoUpdaterDotNET;
 using Newtonsoft.Json;
+using NLog;
 
 namespace NetFx40WpfTest.View
 {
@@ -13,6 +14,9 @@ namespace NetFx40WpfTest.View
     /// </summary>
     public partial class AutoUpdaterWindow : Window
     {
+        // 日志
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
         public AutoUpdaterWindow()
         {
             InitializeComponent();
@@ -40,20 +44,34 @@ namespace NetFx40WpfTest.View
 
             // AutoUpdater.RunUpdateAsAdmin = false;
 
-            AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdaterTest.xml");
+            if (App.IsNetworkAvailable)
+            {
+                AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdaterTest.xml");
+            }
+            else
+            {
+                Log.Error(App.IsNetworkAvailableErrorMsg);
+            }
         }
 
         private void Update_JsonConfig_Button_OnClick(object sender, RoutedEventArgs e)
         {
-            AutoUpdater.ParseUpdateInfoEvent += JsonConfigParseUpdateInfoEvent;
-            AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdaterTest.json");
+            if (App.IsNetworkAvailable)
+            {
+                AutoUpdater.ParseUpdateInfoEvent += JsonConfigParseUpdateInfoEvent;
+                AutoUpdater.Start("http://10.0.11.25:8021/vs2013/test/AutoUpdaterTest.json");
+            }
+            else
+            {
+                Log.Error(App.IsNetworkAvailableErrorMsg);
+            }
         }
 
         private void JsonConfigParseUpdateInfoEvent(ParseUpdateInfoEventArgs args)
         {
             string baseUri = "http://10.0.11.25:8021";
             dynamic jsonConfig = JsonConvert.DeserializeObject(args.RemoteData);
-            
+
             if (null != jsonConfig && bool.Parse(jsonConfig.mandatory.value.ToString()))
             {
                 AutoUpdater.ShowSkipButton = false;
@@ -78,7 +96,7 @@ namespace NetFx40WpfTest.View
                         Value = jsonConfig.checksum.value,
                         HashingAlgorithm = jsonConfig.checksum.hashingAlgorithm
                     }
-                }; 
+                };
             }
         }
     }

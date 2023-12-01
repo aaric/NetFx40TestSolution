@@ -21,12 +21,16 @@ namespace NetFx40WpfTest
         private static Mutex _mutex;
 
         // 启动应用时检查网络，同时监听网络环境
-        private static bool IsNetworkAvailable = NetworkHelper.IsNetworkAvailable();
+        public static bool IsNetworkAvailable = NetworkHelper.IsNetworkAvailable();
+
+        // 监听网络环境异常提示
+        public static string IsNetworkAvailableErrorMsg = "网络不可用，请检查你的网络设置";
 
         protected override void OnStartup(StartupEventArgs e)
         {
             // 仅支持应用程序单列运行
-            _mutex = new Mutex(true, "NetFx40WpfTest", out bool flag);
+            bool flag;
+            _mutex = new Mutex(true, "NetFx40WpfTest", out flag);
             if (!flag)
             {
                 MessageBox.Show("应用程序已运行！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);

@@ -18,7 +18,8 @@ namespace NetFx40WpfTest.Toolkit
         /// <returns></returns>
         public static bool IsNetworkAvailable()
         {
-            return InternetGetConnectedState(out int description, 0);
+            int description;
+            return InternetGetConnectedState(out description, 0);
         }
 
         /// <summary>

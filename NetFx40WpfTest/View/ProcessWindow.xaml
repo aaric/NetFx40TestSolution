@@ -1,0 +1,17 @@
+﻿<Window x:Class="NetFx40WpfTest.View.ProcessWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ProcessWindow" Height="600" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Process}"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <TextBlock Height="200" />
+        </StackPanel>
+        <StackPanel>
+            <Button Content="taskkill /f /im /NetFx40WpfTest.exe"
+                    Command="{Binding DefaultCommand}"
+                    CommandParameter="kill" />
+        </StackPanel>
+    </DockPanel>
+</Window>
