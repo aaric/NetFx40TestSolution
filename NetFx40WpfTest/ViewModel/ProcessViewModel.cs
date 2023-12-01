@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Windows;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using NLog;
@@ -32,6 +33,8 @@ namespace NetFx40WpfTest.ViewModel
                             p.WaitForExit();
                         }
                     }
+
+                    Process.Start(Application.ResourceAssembly.Location);
 
                     Log.Info("[{}] taskkill /f /im /{}.exe", cp.Id, cp.ProcessName);
                     cp.Kill();
