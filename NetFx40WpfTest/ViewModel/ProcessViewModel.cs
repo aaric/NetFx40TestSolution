@@ -50,7 +50,9 @@ namespace NetFx40WpfTest.ViewModel
                         }
                     }
 
-                    Process.Start(Application.ResourceAssembly.Location);
+                    string appFileName = Application.ResourceAssembly.Location;
+                    Log.Info("[{}] start {}", cp.Id, appFileName);
+                    Process.Start(appFileName);
 
                     Log.Info("[{}] taskkill /f /im /{}.exe", cp.Id, cp.ProcessName);
                     cp.Kill();
