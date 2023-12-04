@@ -9,9 +9,12 @@
             <TextBlock Height="200" />
         </StackPanel>
         <StackPanel>
-            <Button Content="taskkill /f /im /NetFx40WpfTest.exe"
+            <Button Content="kill app"
                     Command="{Binding DefaultCommand}"
                     CommandParameter="kill" />
+            <Button Content="restart app"
+                    Command="{Binding DefaultCommand}"
+                    CommandParameter="restart" />
         </StackPanel>
     </DockPanel>
 </Window>

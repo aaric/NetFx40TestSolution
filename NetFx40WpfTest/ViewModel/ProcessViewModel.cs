@@ -19,11 +19,27 @@ namespace NetFx40WpfTest.ViewModel
 
         private void DefaultAction(string cmd)
         {
+            Process cp = Process.GetCurrentProcess();
+
             switch (cmd)
             {
                 case "kill":
-                    Process cp = Process.GetCurrentProcess();
+                    foreach (Process p in Process.GetProcesses())
+                    {
+                        if (p.ProcessName.Equals("NetFx40WpfTest") && p.Id != cp.Id)
+                        {
+                            Log.Info("[{}] taskkill /f /im /{}.exe", p.Id, p.ProcessName);
+                            p.Kill();
+                            p.WaitForExit();
+                        }
+                    }
 
+                    Log.Info("[{}] taskkill /f /im /{}.exe", cp.Id, cp.ProcessName);
+                    cp.Kill();
+                    cp.WaitForExit();
+
+                    break;
+                case "restart":
                     foreach (Process p in Process.GetProcesses())
                     {
                         if (p.ProcessName.Equals("NetFx40WpfTest") && p.Id != cp.Id)
